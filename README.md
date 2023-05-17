@@ -8,3 +8,4 @@ NGINX proxy app for our recipe app API
 * `APP_HOST` - Hostname of the app to foward requests to (default: `app`)
 * `APP_PORT` - Port of the app to foward requests to (default: `9000`)
 
+
