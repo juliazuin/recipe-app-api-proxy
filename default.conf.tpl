@@ -1,14 +1,13 @@
 server {
-    listen: ${LISTEN_PORT};
+    listen 8000;
 
     location /static {
-        /vol/static;
+        alias /vol/static;
     }
-    
+
     location / {
-        uwsgi_pass              ${APP_HOST}:${APP_PORT}
+        uwsgi_pass              127.0.0.1:9000;
         include                 /etc/nginx/uwsgi_params;
         client_max_body_size    10M;
-
     }
 }
